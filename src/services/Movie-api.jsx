@@ -21,7 +21,7 @@ async function fetchTrending() {
             new Error('Oops! Something went wrong...')
         );
     } catch (error) {
-        return error;
+        throw new Error(error.message);
     }
 };
 
@@ -38,7 +38,7 @@ async function fetchMovieDetails(id) {
             new Error('Oops! Something went wrong...')
         );
     } catch (error) {
-        return error;
+        throw new Error(error.message);
     }
 };
 
@@ -55,7 +55,7 @@ async function fetchCast(id) {
             new Error('Oops! Something went wrong...')
         );
     } catch (error) {
-        return error;
+        throw new Error(error.message);
     }
 };
 
@@ -72,7 +72,7 @@ async function fetchReviews(id) {
             new Error('Oops! Something went wrong...')
         );
     } catch (error) {
-        return error;
+        throw new Error(error.message);
     }
 };
 
@@ -89,7 +89,7 @@ async function searchMovies(query) {
             new Error('Oops! Something went wrong...')
         );
     } catch (error) {
-        return error;
+        throw new Error(error.message);
     }
 }
 
